@@ -26,7 +26,7 @@ class PyTest(TestCommand):
 setup(
     name='template',
     version='0.1.0',
-    url='',
+    url='https://github.com/thebedi/template',
     license=license,
     author='Ashpreet Bedi',
     author_email='ashpreetbedi@hotmail.com',
@@ -36,4 +36,9 @@ setup(
     description='Sample package template',
     long_description=readme,
     packages=['template'],
+    entry_points={
+        'console_scripts': [
+            'template = template.__main__:main'
+        ]
+    },
 )
